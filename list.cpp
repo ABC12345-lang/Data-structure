@@ -114,9 +114,9 @@ void DestroyList(DynamicList *list) {
 
 // 测试主函数
 int main() {
-    DynamicList list;
-    InitList(&list);
-
+    DynamicList list;    //这里不能定义成 *list,因为*list是一个指向结构体的指针，它没有指向任何有效的结构体，只有定义成list才是一个结构体变量
+    InitList(&list);    //这些函数调用时传入的都是list 的地址，所以函数内部可以修改主函数中list的值
+                        //指针是地址变量
     Append(&list, 10);
     Append(&list, 20);
     Append(&list, 30);
