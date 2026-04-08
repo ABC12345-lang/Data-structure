@@ -30,7 +30,7 @@ int ExpandList(DynamicList *list) {
     for(int i=0;i<list->size;i++) {
         new_data[i] = list->data[i];
     }
-    list->data = new_data;
+    list->data = new_data;        //让结构体指向新的内存块，替换掉原来的旧数组
     list->capacity = new_cap;
     printf("已扩容至 %d\n", new_cap);
     return 0;
