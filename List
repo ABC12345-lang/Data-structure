@@ -21,4 +21,11 @@
                 printf("%d ",b[i]);
         }
         printf("\n");
-  (2)动态数组扩容：通过malloc,free,realloc.
+  (2)动态数组的ADT：
+        //动态列表结构体
+        typedef struct {
+            int *data;       // ָ指向实际传递数据的数组
+            int size;        // 当前已使用的元素个数
+            int capacity;    // 总容量(最多能存多少)
+        } DynList;
+        
